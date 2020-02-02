@@ -1,0 +1,138 @@
+
+/* Remember: Mobile First. */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* NavigationBar Start */
+
+#nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    top: 0;
+    width: 100vw;
+    background-color:#3a3633 ;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#top {
+    text-decoration: none;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    height: 100%;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    height: 100%;
+}
+
+.jumpto {
+    list-style: none;
+    display: none;
+    position: fixed;
+    top: 5vh;
+    /* width: 100vw; */
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #3a3633 ;
+
+}
+
+.jumpto > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 5vh;
+}
+
+.jumpto > li:hover {
+    border-bottom: 3px whitesmoke;
+    cursor: pointer;
+    background-color: gray;
+}
+
+.jumpto>li:hover .jumpto{
+    display: block;
+}
+
+
+#menu:hover .jumpto{
+    display: block;
+}
+
+#top:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown {
+
+}
+
+/* NavigationBar End */
+
+/* Intro Start */
+
+#intro {
+    margin-top: 5vh;
+    background-image: url('');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+
+@media (min-width: 768px) {
+    /* CSS Rules */
+}
+
+@media (min-width: 1200px) {
+
+    .jumpto > li:hover {
+        border-bottom: 3px whitesmoke;
+        cursor: pointer;
+        width: ;
+    }
+
+    .navbar {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+}
+
+
+}
