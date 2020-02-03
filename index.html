@@ -12,14 +12,14 @@
 <body>
     
     <nav id ="nav">
-        <a id="top" href="#intro">
+        <a class="top" href="#intro">
             <i class="material-icons"> vertical_align_top </i>
         </a>
-        <span id="menu">
+        <span class="menu">
             <i class="material-icons">clear_all</i>
             <ul class="jumpto">
                 <li><a href="#features">Features</a> </li>
-                <li><a href="#half1">Halves</a></li>
+                <li><a href="#halves">Halves</a></li>
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
         </span>
@@ -59,18 +59,21 @@
         </feature>
     </div>
 
-    <div id="half1">
-        <h1>Half 1</h1>
-        <p>This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. </p>
-        <spinbox id="spinbox">
+    <div id="halves">
+        <div class="half1">
+            <h1>Half 1</h1>
+            <p>This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. This half is darker. </p>
+        </div> 
+
+        <spinbox class="spinbox">
             <h2>Do I Spin?</h2>
             <p>Maybe you should hover over me and find out huh? Yeah, you would.</p>
         </spinbox>
-    </div>
 
-    <div id="half2">
-        <h1>Half 2</h1>
-        <p>Gradient Edition?</p>
+        <div class="half2">
+            <h1>Half 2</h1>
+            <p>Gradient Edition?</p>
+        </div>
     </div>
 
     <div id="gallery">
@@ -95,7 +98,7 @@
         </framing>
         </div>
 
-    <form id="register">
+    <form class="register">
         <label class="regbox">Register to our mailing list:</label>
         <regbox>
             <input type="email" class="email" required>
