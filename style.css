@@ -372,7 +372,7 @@ footer {
         
     }
 
-    #nav:hover .dropdown {
+    .drop:hover .dropdown {
         display: block;
         cursor: text;
     }
