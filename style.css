@@ -80,7 +80,6 @@ li > a {
 }
 
 .jumpto > li:hover {
-    border-bottom: 3px whitesmoke;
     cursor: pointer;
     background-color: gray;
 }
@@ -102,24 +101,17 @@ li > a {
 .dropdown {
     display: none;
 }
-
-.dropdown {
-
+.navquad {
+    display: none;
 }
 
-/* gap {
-    display: block;
-    height: 5vh;
-    margin-top: -5vh 0 0 0;
-    visibility: hidden;
-} */
 
 /* NAVIATION BAR END */
 
 /* INTRO START */
 
 #intro {
-    background-image: url('img/intro.jpg');
+    background-image: url('img/New\ Zealand.jpg');
     background-size: cover;
     overflow: hidden;
     color: whitesmoke;
@@ -129,11 +121,11 @@ li > a {
 }
 
 
-#intro>h1 {
+.titlebox>h1 {
     margin: 5vh 3vw;
 }
 
-#intro>h2, #intro>p {
+.titlebox>h2, .titlebox>p {
     display: block;
     background-color: rgba(46, 46, 46, 0.6);
     margin: 0;
@@ -200,6 +192,7 @@ li > a {
 .half1 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     background-color: #3a3633;
     color: whitesmoke;
@@ -211,6 +204,7 @@ li > a {
 .half2 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
     background-image: linear-gradient(to right, white, rgb(0, 102, 255));
     color: whitesmoke;
@@ -223,7 +217,7 @@ li > a {
     display: block;
     margin: 0 auto;
     position: absolute; 
-    top: 45%;
+    top: 46%;
     left: calc(50% - 10rem);
     background-color: #3a3633;
     border: .5rem solid whitesmoke;
@@ -241,6 +235,7 @@ li > a {
 
 .spinbox:hover {
     animation: rotate ease-in-out 5s;
+    cursor:default;
 } 
 
 @keyframes rotate {
@@ -263,6 +258,7 @@ li > a {
     position: relative;
     display: block;
     object-fit: cover;
+    overflow: hidden;
     padding: 0;
     margin: 0;
 }
@@ -270,7 +266,6 @@ li > a {
 .gallery-image {
     display: block;
     max-width: 100%;  
-    
     object-fit: cover;
     overflow: hidden;
 }
@@ -289,12 +284,12 @@ li > a {
 
 .frame:hover h3{                  /**/
     visibility: visible;
+    /* transition: visibility 3s ease-in; */
 }
 
 .frame:hover img {
     animation: zoom ease-in .5s;
     transform: scale(1.1);
-    
 } 
 
 @keyframes zoom {
@@ -315,9 +310,11 @@ li > a {
     padding-top: 5vh;
 }
 
-.regbox {
-    display: inline-block;
+regbox {
+    display: flex;
 }
+
+
 
 
 /* REGISTER END */
@@ -347,8 +344,144 @@ footer {
 
 @media (min-width: 768px) {
     
+
 /*NAV*/
 
+    .dropdown {
+        list-style: none;
+        display: none;
+        position: fixed;
+        top: 5vh;
+        right: 0;
+        padding: 0;
+        margin: 0;
+        background-color: #3a3633;
+    }
+
+    .dropdown > li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20vw;
+        height: 5vh;
+    }
+
+    .dropdown > li:hover {
+        cursor: pointer;
+        background-color: gray;
+        
+    }
+
+    #nav:hover .dropdown {
+        display: block;
+        cursor: text;
+    }
+
+    .navquad {
+        /* display: inline-block; */
+        list-style: none;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        height: 5vh;
+    }
+
+    .navquad>li {
+        padding: 0 3vw;
+        height: 100%;
+        margin-bottom: 6px;
+    }
+
+    .a:hover {
+        border-bottom: 3px solid whitesmoke;
+    }
+
+    .menu {
+        display: none;
+    }
+
+/*NAV END */
+
+
+/*INTRO*/
+
+#intro {
+    background-image: url('img/New\ Zealand.jpg');
+    background-size: cover;
+    overflow: hidden;
+    color: whitesmoke;
+    padding-top: 10vh; /* nav */
+    margin-top: -5vh; /* nav */
+    height: 100vh ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlebox {
+    
+    border: 5px solid white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    max-height: 80vh;
+    max-width: 70vw;
+    grid-template-areas:
+    'title title'
+    'subtitle subtitle'
+    'text1 text2'
+    'text1 text2';
+    
+}
+
+
+.titlebox>h1 {
+    margin: 5vh 3vw;
+    grid-area: title;
+    text-align: center;
+}
+
+.titlebox>h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(46, 46, 46, 0.6);
+    grid-area: subtitle;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+.p1, .p2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(46, 46, 46, 0.6);
+    border-top: 2px dashed rgb(145, 145, 145);
+}
+
+.p1 {
+    grid-area: text1;
+}
+.p2 {
+    grid-area: text2;
+}
+
+
+/* FEATURES */
+
+        #features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0 0 5vh 0;
+        padding-top: 5vh; /* nav */
+        margin-top: -5vh; /* nav */
+        }
 
 
 /*GALLERY*/
@@ -368,36 +501,79 @@ footer {
         height: 100%;
     }
 
-/* FEATURES */
-
-    #features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0 0 5vh 0;
-    padding-top: 5vh; /* nav */
-    margin-top: -5vh; /* nav */
-    }
-
-
 }
+
+
+
 
 @media (min-width: 1200px) {
 
-    .jumpto > li:hover {
-        border-bottom: 3px whitesmoke;
-        cursor: pointer;
-        width: ;
+/*INTRO*/
+
+    #intro {
+        background-image: url('img/New\ Zealand.jpg');
+        background-size: cover;
+        overflow: hidden;
+        color: whitesmoke;
+        padding-top: 10vh; /* nav */
+        margin-top: -5vh; /* nav */
+        height: 100vh ;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .navbar {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        margin: 0;
+    .titlebox {
+        
+        border: 5px solid white;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-columns:1fr 1fr 1fr ;
+        /* max-height: 80vh; */
+        max-width: 70vw;
+        grid-template-areas:
+        'title subtitle subtitle'
+        'title subtitle subtitle'
+        'title text1 text2'
+        'title text1 text2'
+        'title text1 text2';
+        
     }
+
+
+    .titlebox>h1 {
+        margin: 5vh 3vw;
+        grid-area: title;
+    }
+
+    .titlebox>h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(46, 46, 46, 0.6);
+        grid-area: subtitle;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    } 
+    
+    .p1, .p2 {
+        display: flex;
+        align-items: center;
+        background-color: rgba(46, 46, 46, 0.6);
+        margin: 0;
+        border-top: 2px dashed rgb(70, 70, 70);
+    }
+
+    .p1 {
+        grid-area: text1;
+    }
+    .p2 {
+        grid-area: text2;
+    }
+
+
 
 /* FEATURES */
 
@@ -411,27 +587,12 @@ footer {
         margin-top: -5vh; /* nav */
     }
 
-    /* .feature {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0 0 5px 2px grey;
-        border-radius: 4px;
-        margin: 10vh auto;
-        padding: 1rem;
-        text-align: center;
-        width: 20rem;
-    } */
-
-
-
-
 /*GALLERY*/
 
     #gallery {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         padding-top: 5vh; /*nav*/
         margin-top: -5vh; /*nav*/
     }
@@ -443,14 +604,28 @@ footer {
         height: 100%;
     }
 
-/* SPINBOX */
+/* SPINBOX - EXTRA */
 
+    .spinbox {
+        top: 47%;
+        left: 10rem;
+        transition: left 3s ease-in-out;
+        /* -webkit-transition: scale 1s; */
+    }
+    
     .spinbox:hover {
         animation: rotate ease-in-out 5s;
+        left:calc(50% - 10rem);
+        /* transform: scale(0); */
+        /* -webkit-transition: animation, left 5s; */
+        
     } 
     
     @keyframes rotate {
         0% {transform: rotate(0deg);}
+        50% {transform: rotate(-180deg);}
         100% {transform: rotate(360deg);}
     }
+
+
 }
